@@ -262,15 +262,11 @@ body {
 }
 
 .modal-dialog {
-  width: 90rem;
-  max-width: calc(100% - 3.2rem);
-  margin: 0 auto;
+  max-width: 90rem;
+  width: calc(100% - 3.2rem);
 }
 
 .modal-content {
-  position: fixed;
-  width: 90rem;
-  max-width: calc(100% - 3.2rem);
   top: 3.6rem;
   -webkit-box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 4px 20px 0 rgba(0, 0, 0, 0.19);
           box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 4px 20px 0 rgba(0, 0, 0, 0.19);
