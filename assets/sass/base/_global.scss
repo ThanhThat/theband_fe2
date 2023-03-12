@@ -1,0 +1,21 @@
+html {
+  font-size: 62.5%;
+  line-height: var(--line-height);
+  font-family: var(--font-family-base);
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: var(--font-size);
+  font-family: inherit;
+}
+
+.uppercase {
+  text-transform: uppercase !important;
+}
+
+.pull-right {
+  // align-items: unset;
+  justify-content: flex-end !important;
+  width: 100%;
+}

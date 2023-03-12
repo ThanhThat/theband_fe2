@@ -1,0 +1,265 @@
+.home {
+  .content {
+    margin-top: var(--header-h);
+  }
+
+  .slider {
+    .carousel-caption {
+      padding: 36px 0;
+    }
+    h3 {
+      font-family: var(--font-family-heading);
+      font-size: 2.4rem;
+      font-weight: 400;
+      line-height: calc(2.4rem * 1.5);
+
+      margin: 1rem 0;
+    }
+
+    p {
+      font-weight: 700;
+      text-shadow: 0 5px 10px rgba(0 0 0 / 0.8);
+      line-height: calc(1.6rem * 1.5);
+    }
+  }
+
+  .wrapper {
+    padding: 6.4rem 1.6rem;
+    margin: 0 auto;
+    max-width: 80rem;
+  }
+
+  .main-title {
+    font-size: 3rem;
+    font-family: var(--font-family-heading);
+    font-weight: 400;
+    line-height: calc(3rem * 1.5);
+    text-align: center;
+    letter-spacing: 4px;
+
+    margin: 1rem 0;
+
+    text-transform: uppercase;
+  }
+
+  .sologan {
+    // font-family: var(--font-family-base);
+    font-style: italic;
+    text-align: center;
+    opacity: 0.6;
+    margin: 1.5rem auto;
+
+    span {
+      text-transform: capitalize;
+    }
+  }
+
+  .band-description {
+    text-align: justify;
+    margin-bottom: 1.5rem;
+  }
+
+  .member {
+    @include flex(space-between);
+    flex-wrap: nowrap;
+    padding: 3.2rem 0;
+
+    .member-name {
+      font-size: inherit;
+      margin: 1.5rem 0;
+      text-align: center;
+    }
+
+    .member-image {
+      img {
+        width: 60%;
+        margin: 0 auto 1.6rem;
+        border-radius: 4px;
+      }
+    }
+  }
+
+  @media (max-width: 60rem) {
+    .member {
+      flex-direction: column;
+
+      .member-item {
+        width: 100%;
+      }
+    }
+  }
+
+  .tour {
+    background-color: #000;
+
+    .main-title,
+    .sologan {
+      color: #fff;
+    }
+
+    .sologan {
+      margin-bottom: 3.9rem;
+    }
+
+    .ticket {
+      display: block;
+      background-color: #fff;
+    }
+
+    .ticket-item {
+      position: relative;
+      padding: 8px 16px;
+      border-bottom: 1px solid #ddd;
+      color: #757575;
+
+      :first-of-type {
+        text-transform: capitalize;
+      }
+
+      .sold-out {
+        display: inline-block;
+        padding: 0 8px;
+        margin-left: 1.6rem;
+        background-color: #f44336;
+        color: #fff;
+      }
+
+      .ticket-quantity {
+        position: absolute;
+        top: 50%;
+        right: 2.4rem;
+        transform: translateY(-50%);
+        padding: 1px 8px;
+        color: #fff;
+        background-color: #000;
+        // line-height: calc(1.5rem * 1.5);
+        text-align: center;
+        border-radius: 50%;
+      }
+    }
+
+    .address {
+      @include flex(space-between);
+      gap: 1.6rem;
+      padding: 3.2rem 0 4.8rem;
+
+      &-item {
+        flex: 1;
+      }
+
+      &-image {
+        cursor: pointer;
+
+        &:hover img {
+          opacity: 0.6;
+        }
+      }
+
+      &-body {
+        padding: 1.6rem;
+        background-color: #fff;
+      }
+
+      &-title {
+        font-weight: 700;
+        font-size: inherit;
+        margin: 1.5rem 0;
+      }
+
+      &-date {
+        opacity: 0.6;
+      }
+
+      &-description {
+        margin: 1.5rem 0;
+      }
+    }
+
+    @media (max-width: 60rem) {
+      .address {
+        flex-direction: column;
+
+        &-item {
+          width: 100%;
+        }
+
+        &-image {
+          width: 100%;
+
+          img {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  .contact-body {
+    @include flex(space-between, flex-start);
+    padding: 3.2rem 0 4.8rem;
+  }
+
+  .contact-info {
+    flex: 1;
+
+    &-item {
+      font-size: 1.8rem;
+    }
+
+    i {
+      width: 3rem;
+      // text-align: left;
+    }
+
+    a {
+      color: #3498db;
+    }
+  }
+
+  .contact-form {
+    flex: 1;
+    @include flex(flex-start, flex-start);
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .contact-control {
+    @include flex();
+    position: relative;
+    flex: 1;
+    width: 100%;
+    flex-wrap: nowrap;
+    gap: 1.6rem;
+
+    input[type="text"],
+    input[type="email"] {
+      flex: 1;
+      padding: 8px;
+    }
+  }
+
+  @media (max-width: 60rem) {
+    .contact-body {
+      flex-direction: column;
+    }
+
+    .contact-form {
+      width: 100%;
+      gap: 1.6rem;
+      margin-top: 3.2rem;
+    }
+
+    .contact-control {
+      flex-direction: column;
+
+      input[type="text"],
+      input[type="email"] {
+        width: 100%;
+      }
+
+      input[type="submit"] {
+        align-self: end;
+      }
+    }
+  }
+}
